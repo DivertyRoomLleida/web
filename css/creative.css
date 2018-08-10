@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-family: 'spinweradBold', 'Montserrat', Arial, sans-serif;
+  font-family: 'spinweradBold', Arial, sans-serif;
 }
 
 hr {
@@ -43,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'spinweradBold','Montserrat', sans-serif;
+  font-family: 'spinweradBold',Arial, sans-serif;
 }
 
 .bg-primary {
