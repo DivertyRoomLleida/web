@@ -1,0 +1,51 @@
+body{font-family:'Montserrat';}
+#logocentral{width:70%;margin-top:-2rem;margin-bottom:0rem;}
+#logocentralp{width:70%;margin-top:12rem;}
+@media screen and (max-width:992px){#logocentral{width:100%;margin-top:8rem;}
+}
+.section-heading{font-size:2.5rem;color:#000 !important;}
+hr.light{border-color:#000;}
+#mainNav.navbar-brand.navbar-toggler{font-size:1.25rem;}
+img.logo-navbar{width:2.5rem !important;height:2.5rem !important;}
+.sr-icons{color:#fff !important;}
+.sr-contact{color:#000 !important;}
+.sr-contact:hover{color:#999 !important;}
+p.text-inicial{color:black;font-size:1.5rem !important;}
+p.text-autor{color:white;font-size:1.5rem !important;}
+.text-groc{color:#faed23 !important;}
+.text-lila{color:#99b !important;}
+.text-blau{color:#56acde !important;}
+.text-vermell{color:#cd4e3d !important;}
+.boto-groc{background-color:#99b !important;}
+.boto-groc:hover{background-color:#97a !important;}
+.boto-blanc{background-color:white !important;}
+.text-portada{margin-bottom:0 !important;margin-top:6rem !important;}
+.text-portada p{margin-bottom:0;}
+.text-portada span{background-color:rgba(0, 0, 0, 0);color:rgba(0, 0, 0, 0);display:inline-block;padding:0 5px;margin-bottom:-5rem;font-size:1rem;}
+@media screen and (max-width:992px){.text-portada{font-size:1.4rem !important;color:rgba(0, 0, 0, 1.0) !important;margin-top:5rem !important;}
+#mainNav{background-color:#99b !important;}
+}
+.quadre-portada{background-color:red !important;}
+section{padding:3rem 0 !important;}
+.fonsgroc{background-color:#faed23 !important;}
+.fonslila{background-color:#99b !important;}
+hr{border-color:#99b;}
+hr.hr-negre{border-color:#000;}
+.nav-link:hover{color:#fff !important;}
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active{color:green !important;}
+#mainNav .navbar-nav > li.nav-item > a.nav-link,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus{font-size:1.1rem;outline:none;}
+#mainNav.navbar-shrink{background-color:#99b !important;}
+#mainNav.navbar-shrink{background-color:#99b !important;}
+img.collaborador:hover{opacity:0.3 !important;}
+div.logodoscaixes{background-image:url("../img/logos/imatge2caixes.png") !important;}
+#map{height:90%;}
+hr.my-4{margin-bottom:3.5rem !important;}
+.btn-xxl{padding:1.3rem 2.3rem;font-size:1.1rem;}
+@media all and (-ms-high-contrast:none), (-ms-high-contrast:active){#logocentral{margin-top:7rem;}
+}
+.btn-twitter{background-color:#1b95e0;color:#fff;font-size:0.9rem;font-weight:normal;}
+.btn-twitter:hover{background-color:#017bc6 !important;color:#fff;}
+.btn-twitter:focus{background-color:#017bc6 !important;color:#fff;}
+.textnegre{color:#000;}
