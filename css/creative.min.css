@@ -1,21 +1,22 @@
 @font-face{font-family:"spinweradBold";src:url("../fonts/spinwerad.woff2") format("woff2");font-weight:normal;font-style:normal;}
 body,
 html{width:100%;height:100%;}
-body{font-family:'spinweradBold', Arial, sans-serif;}
+body{font-family:'open sans','spinweradBold', 'Montserrat', Arial, sans-serif;}
 hr{max-width:50px;border-width:3px;border-color:#F05F40;}
 hr.light{border-color:#fff;}
-a{color:#F05F40;-webkit-transition:all 0.2s;-moz-transition:all 0.2s;transition:all 0.2s;}
+a{-webkit-transition:all 0.2s;-moz-transition:all 0.2s;transition:all 0.2s;}
 a:hover{color:#f05f40;}
 h1,
 h2,
 h3,
 h4,
 h5,
-h6{font-family:'spinweradBold',Arial, sans-serif;}
-.bg-primary{background-color:#99b !important;}
+h6{font-family:'spinweradBold','Montserrat', sans-serif;}
+.bg-primary{background-color:#ff5a00 !important;}
+.bg-secondary{background-color:#e5dbe6 !important;}
 .bg-dark{background-color:#212529 !important;}
 .text-faded{color:rgba(255, 255, 255, 0.7);}
-.text-normal{color:rgba(0, 0, 0, 0.7);font-size:1.5rem !important;}
+.text-normal{color:rgba(0, 0, 0, 0.7);font-size:1.4rem !important;font-weight:600;}
 section{padding:8rem 0;}
 .section-heading{margin-top:0;}
 ::-moz-selection{color:#fff;background:#212529;text-shadow:none;}
@@ -52,13 +53,16 @@ img::-moz-selection{color:#fff;background:transparent;}
 header.masthead{background-color:black;height:100%;padding-bottom:3rem !important;}
 header.masthead hr{margin-top:30px;margin-bottom:30px;}
 header.masthead h1{font-size:2rem;}
+header.masthead h2{font-size:1rem;color:#ff5a00;}
 header.masthead p{font-weight:300;}
 @media (min-width:768px){header.masthead p{font-size:1.15rem;}
 }
 @media (min-width:992px){header.masthead{height:100vh;min-height:650px;padding-top:0;padding-bottom:0;}
 header.masthead h1{font-size:3rem;}
+header.masthead h2{font-size:1.5rem;}
 }
 @media (min-width:1200px){header.masthead h1{font-size:6rem;}
+header.masthead h2{font-size:3rem;}
 }
 .service-box{max-width:400px;}
 .portfolio-box{position:relative;display:block;max-width:650px;margin:0 auto;}

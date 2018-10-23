@@ -1,7 +1,13 @@
-body{font-family:'Montserrat';}
-#logocentral{width:70%;margin-top:-2rem;margin-bottom:0rem;}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');div table{width:100%;}
+body{font-family:'Open Sans','spinweradBold', 'Montserrat', Arial, sans-serif;}
+header{background-size:cover;background-repeat:no-repeat;cursor:pointer;}
+.sala{height:600px;width:100%;}
+.cookies{height:600px;width:100%;background-image:url("../img/IMATGES/farmers_desktop.jpg");background-size:cover;background-repeat:no-repeat;}
+.logocentral{width:70%;margin-top:0.5rem;margin-bottom:0rem;}
 #logocentralp{width:70%;margin-top:12rem;}
-@media screen and (max-width:992px){#logocentral{width:100%;margin-top:8rem;}
+@media screen and (max-width:992px){.logocentral{width:100%;margin-top:2rem;}
+.sala{height:400px;width:100%;}
+.cookies{height:400px;width:100%;background-image:url("../img/IMATGES/farmers_mobile.jpg");background-size:cover;background-repeat:no-repeat;}
 }
 .section-heading{font-size:2.5rem;color:#000 !important;}
 hr.light{border-color:#000;}
@@ -19,11 +25,13 @@ p.text-autor{color:white;font-size:1.5rem !important;}
 .boto-groc{background-color:#99b !important;}
 .boto-groc:hover{background-color:#97a !important;}
 .boto-blanc{background-color:white !important;}
-.text-portada{margin-bottom:0 !important;margin-top:6rem !important;}
+.text-portada{margin-bottom:0 !important;margin-top:3rem !important;display:none;font-size:1.9rem;}
 .text-portada p{margin-bottom:0;}
-.text-portada span{background-color:rgba(0, 0, 0, 0);color:rgba(0, 0, 0, 0);display:inline-block;padding:0 5px;margin-bottom:-5rem;font-size:1rem;}
-@media screen and (max-width:992px){.text-portada{font-size:1.4rem !important;color:rgba(0, 0, 0, 1.0) !important;margin-top:5rem !important;}
-#mainNav{background-color:#99b !important;}
+.text-portada span{background-color:rgba(0, 0, 0, 0);color:rgba(255, 255, 0, 255);display:inline-block;padding:0 5px;margin-bottom:-5rem;font-size:1.9rem;}
+.portada{cursor:pointer;}
+@media screen and (max-width:992px){.text-portada{font-size:1.2rem !important;color:rgba(255, 255, 255, 255) !important;margin-top:5rem !important;}
+#mainNav{background-color:#ff5a00 !important;}
+#com .text-normal{font-size:1rem !important;margin-left:1rem !important;margin-right:1rem !important;}
 }
 .quadre-portada{background-color:red !important;}
 section{padding:3rem 0 !important;}
@@ -36,16 +44,30 @@ hr.hr-negre{border-color:#000;}
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active{color:green !important;}
 #mainNav .navbar-nav > li.nav-item > a.nav-link,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus{font-size:1.1rem;outline:none;}
-#mainNav.navbar-shrink{background-color:#99b !important;}
-#mainNav.navbar-shrink{background-color:#99b !important;}
+#mainNav.navbar-shrink{background-color:#ff5a00 !important;}
+#mainNav.navbar-shrink{background-color:#ff5a00 !important;}
 img.collaborador:hover{opacity:0.3 !important;}
-div.logodoscaixes{background-image:url("../img/logos/imatge2caixes.png") !important;}
+div.imggirl{background-color:white;background-image:url("../img/noves/karaoke2.jpg") !important;background-size:contain;background-repeat:no-repeat;background-position:center;}
+div.imgfootball{background-image:url("../img/noves/jocs.jpg") !important;background-size:cover;background-repeat:no-repeat;}
+div.imgchiken{background-image:url("../img/IMATGES/kitchen.jpg") !important;background-size:cover;background-repeat:no-repeat;}
 #map{height:90%;}
 hr.my-4{margin-bottom:3.5rem !important;}
 .btn-xxl{padding:1.3rem 2.3rem;font-size:1.1rem;}
-@media all and (-ms-high-contrast:none), (-ms-high-contrast:active){#logocentral{margin-top:7rem;}
+@media all and (-ms-high-contrast:none), (-ms-high-contrast:active){.logocentral{margin-top:2rem;}
 }
 .btn-twitter{background-color:#1b95e0;color:#fff;font-size:0.9rem;font-weight:normal;}
 .btn-twitter:hover{background-color:#017bc6 !important;color:#fff;}
 .btn-twitter:focus{background-color:#017bc6 !important;color:#fff;}
 .textnegre{color:#000;}
+.n12{background-color:blue;}
+.n14{background-color:yellow;}
+.horari{border:1px solid black;border-radius:5px 43px;margin-bottom:10px;}
+.horari td:nth-child(3){text-align:right;}
+.horari td{border-bottom:.2px dotted;}
+.horari th{width:10%;}
+.extres th{text-align:right;}
+.preu{text-align:right;}
+.preu:after{content:'€';}
+.invalid-feedback{color:white;}
+.valid-feedback{color:black;}
+iframe{height:450px;}

@@ -11,8 +11,8 @@
         <title>DivertyRoom</title>
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
        
-        <link href="css/creative.min.css" rel="stylesheet">
-        <link href="css/estils.min.css" rel="stylesheet">
+        <link href="css/creative.css" rel="stylesheet">
+        <link href="css/estils.css" rel="stylesheet">
        
 
         <link rel="icon" href="img/logos/Cercle-Color.png" type="image/png">
@@ -70,18 +70,9 @@
          <script type="text/javascript">
             var et = document.getElementById('titol');
             var colorchg = function(color){et.style.color=color;};
-            var color=["#FFB336","#E63AE9","#91FF36","#00E8FF","#FFFFFF"];
+            var color=["yellow","blue","red","green","white"];
             var index = 0;
             window.onload = function(){setInterval("colorchg(color[++index%color.length])",1500);}
         </script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123760511-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-123760511-1');
-        </script>
-
     </body>
 </html>
