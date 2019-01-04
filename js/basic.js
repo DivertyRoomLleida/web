@@ -180,7 +180,8 @@ function getCalendar(calendarId,timeMin){
 									!0;
 								}
 							recurrenceFinal = recurrenceFinal.when ? recurrenceFinal : !1;
-							let eventCalendar = new ECalendar(item.summary,caract[0],caract[1],caract[2],dateTime.date, dateTime.dateEnd, dateTime.hora, dateTime.horaEnd, recurrenceFinal);
+							let summary = item.summary.split(' ')[0];
+							let eventCalendar = new ECalendar(summary,caract[0],caract[1],caract[2],dateTime.date, dateTime.dateEnd, dateTime.hora, dateTime.horaEnd, recurrenceFinal);
 							calendari.push(eventCalendar);
 						}		
   						resolve(calendari);
