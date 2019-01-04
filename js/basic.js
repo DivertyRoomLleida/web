@@ -1,3 +1,36 @@
+/*
+ * Copyright (C) 2018 Ivà Domingo i Solsona - http://www.iva.cat/
+ *
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions
+ *  are met:
+ *
+ *    Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ *    Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the
+ *    distribution.
+ *
+ *    Neither the name of Ivà Domingo i Solsona nor the names of
+ *    its contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ *  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ *  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ *  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ *  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ *  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ *  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ */
 
 function getContrast50(hexcolor){
     return (parseInt(hexcolor, 16) > 0xffffff/2) ? 'black':'white';
@@ -114,7 +147,12 @@ Calendars.prototype.getTime = function(date){
 Calendars.prototype.getStatus = function(){
 	return this._items.length>0;
 };
-
+/* 
+ * Get Google calendar events
+ * summary : only the first word is used
+ * item description: color in hex, priority, price split by comma 
+ *
+ */
 function getCalendar(calendarId,timeMin){
 	const promise = new Promise(function (resolve, reject){
 				getJSON('https://www.googleapis.com/calendar/v3/calendars/'+calendarId+'/events?timeMin='+timeMin+'T00:00:00.000Z&key=AIzaSyDArEoGcMKwiwTBJN5hDXFIbPhitMcBZIc',
