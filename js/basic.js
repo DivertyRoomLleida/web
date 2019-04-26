@@ -170,7 +170,7 @@ function getCalendar(calendarId,timeMin){
 								/*Event*/
 								let item = data.items[i];
 								if (typeof item.start ==='undefined'){
-									!0:
+									!0;
 									//console.error(item);
 								}
 								else{
