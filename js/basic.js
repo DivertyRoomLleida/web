@@ -169,6 +169,7 @@ function getCalendar(calendarId,timeMin){
 							
 								/*Event*/
 								let item = data.items[i];
+								console.log(item);
 								var dateTime = [];
 								dateTime.all = item.start.date || item.start.dateTime;
 								dateTime.date = dateTime.all.slice(0,10);
