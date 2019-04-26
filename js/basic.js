@@ -170,7 +170,8 @@ function getCalendar(calendarId,timeMin){
 								/*Event*/
 								let item = data.items[i];
 								if (typeof item.start ==='undefined'){
-									console.error(item);
+									!0:
+									//console.error(item);
 								}
 								else{
 									var dateTime = [];
