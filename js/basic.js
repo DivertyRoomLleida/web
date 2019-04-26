@@ -169,60 +169,65 @@ function getCalendar(calendarId,timeMin){
 							
 								/*Event*/
 								let item = data.items[i];
-								console.log(item);
-								var dateTime = [];
-								dateTime.all = item.start.date || item.start.dateTime;
-								dateTime.date = dateTime.all.slice(0,10);
-								dateTime.hora = dateTime.all.slice(11,19);
-								dateTime.zone = dateTime.all.slice(19,25);
-								dateTime.all = item.end.date || item.end.dateTime;
-								dateTime.dateEnd = dateTime.all.slice(0,10);
-								dateTime.horaEnd = dateTime.all.slice(11,19);
-								
-								let caract = item.description.split(",");
-								let recurrenceFinal=[];
-								if(item.recurrence){
-									let recurrence = item.recurrence[0].split(";");
-									recurrenceFinal.when=((recurrence[0].split(":"))[1].split("="))[1];
-									days = recurrence[1].split("=")[1].split(",");
-									/*Passar dies a nombre*/
-									days.forEach(function(element, index){
-										switch (element){
-											case 'SU':
-												days[index] = 0;
-												break;
-											case 'MO':
-												days[index] = 1;
-												break;
-											case 'TU':
-												days[index] = 2;
-												break;
-											case 'WE':
-												days[index] = 3;
-												break;
-											case 'TH':
-												days[index] = 4;
-												break;
-											case 'FR':
-												days[index] = 5;
-												break;
-											case 'SA':
-												days[index] = 6;
-												break;
-											default:
-												console.log(";)");
-										}
-									});
-									recurrenceFinal["day"]=days;
+								if (typeof item.start ==='undefined'){
+									console.error(item);
 								}
 								else{
-									!0;
+									var dateTime = [];
+									dateTime.all = item.start.date || item.start.dateTime;
+									dateTime.date = dateTime.all.slice(0,10);
+									dateTime.hora = dateTime.all.slice(11,19);
+									dateTime.zone = dateTime.all.slice(19,25);
+									dateTime.all = item.end.date || item.end.dateTime;
+									dateTime.dateEnd = dateTime.all.slice(0,10);
+									dateTime.horaEnd = dateTime.all.slice(11,19);
+									
+									let caract = item.description.split(",");
+									let recurrenceFinal=[];
+									if(item.recurrence){
+										let recurrence = item.recurrence[0].split(";");
+										recurrenceFinal.when=((recurrence[0].split(":"))[1].split("="))[1];
+										days = recurrence[1].split("=")[1].split(",");
+										/*Passar dies a nombre*/
+										days.forEach(function(element, index){
+											switch (element){
+												case 'SU':
+													days[index] = 0;
+													break;
+												case 'MO':
+													days[index] = 1;
+													break;
+												case 'TU':
+													days[index] = 2;
+													break;
+												case 'WE':
+													days[index] = 3;
+													break;
+												case 'TH':
+													days[index] = 4;
+													break;
+												case 'FR':
+													days[index] = 5;
+													break;
+												case 'SA':
+													days[index] = 6;
+													break;
+												default:
+													console.log(";)");
+											}
+										});
+										recurrenceFinal["day"]=days;
+										}
+								
+									else{
+										!0;
+									}
+								recurrenceFinal = recurrenceFinal.when ? recurrenceFinal : !1;
+								let summary = item.summary.split(' ')[0];
+								let eventCalendar = new ECalendar(summary,caract[0],caract[1],caract[2],dateTime.date, dateTime.dateEnd, dateTime.hora, dateTime.horaEnd, recurrenceFinal);
+								calendari.push(eventCalendar);
 								}
-							recurrenceFinal = recurrenceFinal.when ? recurrenceFinal : !1;
-							let summary = item.summary.split(' ')[0];
-							let eventCalendar = new ECalendar(summary,caract[0],caract[1],caract[2],dateTime.date, dateTime.dateEnd, dateTime.hora, dateTime.horaEnd, recurrenceFinal);
-							calendari.push(eventCalendar);
-						}		
+							}		
   						resolve(calendari);
   					}
 				});
