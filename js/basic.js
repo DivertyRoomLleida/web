@@ -158,7 +158,8 @@ function getCalendar(calendarId,timeMin){
 		getJSON('https://www.googleapis.com/calendar/v3/calendars/'+calendarId+'/events?timeMin='+timeMin+'T00:00:00.000Z&key=AIzaSyDArEoGcMKwiwTBJN5hDXFIbPhitMcBZIc',
 			function(err, data) {
 				if (err !== null) {
-					reject(alert('Something went wrong: ' + err));
+					//reject(alert('Something went wrong: ' + err));
+					true;
 				}
 				else{
 					var calendari = [];
